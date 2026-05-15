@@ -16,7 +16,7 @@ Feature: Pruebas negativas de autenticacion (Unhappy Paths)
     And match response == errorSchema
     # Validación de mensaje esperado
     And match response.error == "<error_esperado>"
-    # Performance básica
+    # Performance basica
     And assert responseTime < 3000
     * karate.log('Prueba de <descripcion> exitosa. Error validado:', response.error)
 
