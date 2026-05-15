@@ -23,4 +23,4 @@ public class RunnersTest {
         GenerateReport.generateReport();
     }
 
-}s
+}
