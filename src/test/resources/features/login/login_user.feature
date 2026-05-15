@@ -16,6 +16,7 @@ Feature: Inicio de Sesión de Usuario
     And match response.token == '#string'
     * def sessionToken = response.token
     * assert sessionToken.length >= 16
+    # Devuelo token
     * def result = { token: sessionToken }
     * karate.log('Login exitoso. Token obtenido:', sessionToken)
 
