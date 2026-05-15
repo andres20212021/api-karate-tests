@@ -12,13 +12,21 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Java -->
         <java.version>21</java.version>
+
+        <!-- Plugins -->
         <maven.compiler.version>3.11.0</maven.compiler.version>
         <maven.surefire.version>3.1.2</maven.surefire.version>
+
+        <!-- Karate -->
         <karate.version>1.5.1</karate.version>
     </properties>
 
     <dependencies>
+
+        <!-- Karate + JUnit5 -->
         <dependency>
             <groupId>io.karatelabs</groupId>
             <artifactId>karate-junit5</artifactId>
@@ -26,12 +34,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Cucumber HTML Reports -->
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
             <version>5.8.1</version>
         </dependency>
 
+        <!-- Commons IO -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -41,14 +51,18 @@
     </dependencies>
 
     <build>
+
         <testResources>
             <testResource>
                 <directory>src/test/resources</directory>
             </testResource>
         </testResources>
+
         <plugins>
 
+            <!-- Maven Compiler -->
             <plugin>
+
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.version}</version>
@@ -61,6 +75,7 @@
 
             </plugin>
 
+            <!-- Maven Surefire -->
             <plugin>
 
                 <groupId>org.apache.maven.plugins</groupId>
@@ -68,6 +83,14 @@
                 <version>${maven.surefire.version}</version>
 
                 <configuration>
+
+                    <!-- Ejecutar runners -->
+                    <includes>
+                        <include>**/*Runner.java</include>
+                        <include>**/*Test.java</include>
+                    </includes>
+
+                    <!-- Encoding -->
                     <argLine>
                         -Dfile.encoding=UTF-8
                     </argLine>
