@@ -12,7 +12,7 @@ public class RunnersTest {
     @Test
     void testParallel() {
         Results results = Runner.path("classpath:features")
-                .tags("@login_negative")
+                .tags("@login_success")
                 .outputCucumberJson(true)
                 .parallel(1);
 
@@ -23,4 +23,4 @@ public class RunnersTest {
         GenerateReport.generateReport();
     }
 
-}
+}s

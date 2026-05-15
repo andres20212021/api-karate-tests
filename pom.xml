@@ -11,25 +11,14 @@
     <packaging>jar</packaging>
 
     <properties>
-
-        <!-- Encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- Java -->
         <java.version>21</java.version>
-
-        <!-- Maven Plugins -->
         <maven.compiler.version>3.11.0</maven.compiler.version>
         <maven.surefire.version>3.1.2</maven.surefire.version>
-
-        <!-- Karate -->
         <karate.version>1.5.1</karate.version>
-
     </properties>
 
     <dependencies>
-
-        <!-- Karate -->
         <dependency>
             <groupId>io.karatelabs</groupId>
             <artifactId>karate-junit5</artifactId>
@@ -52,19 +41,14 @@
     </dependencies>
 
     <build>
-
-        <!-- Karate Resources -->
         <testResources>
             <testResource>
                 <directory>src/test/resources</directory>
             </testResource>
         </testResources>
-
         <plugins>
 
-            <!-- Maven Compiler -->
             <plugin>
-
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.version}</version>
@@ -77,7 +61,6 @@
 
             </plugin>
 
-            <!-- Maven Surefire -->
             <plugin>
 
                 <groupId>org.apache.maven.plugins</groupId>
@@ -85,8 +68,6 @@
                 <version>${maven.surefire.version}</version>
 
                 <configuration>
-
-
                     <argLine>
                         -Dfile.encoding=UTF-8
                     </argLine>

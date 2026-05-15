@@ -6,7 +6,6 @@ Feature: Validación de recursos
 
   @contract
   @business
-  @ejemplo
   @regression
   Scenario: Validar listado de recursos y reglas de negocio
     Given path '/api/unknown'

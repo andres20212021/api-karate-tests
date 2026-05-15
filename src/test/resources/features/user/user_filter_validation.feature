@@ -5,7 +5,7 @@ Feature: Validación de filtrado de usuarios
 
   @business
   @regression
-    @filter
+  @filter
   Scenario: Buscar usuario específico usando karate.filter (George)
     Given path '/api/users'
     When method get

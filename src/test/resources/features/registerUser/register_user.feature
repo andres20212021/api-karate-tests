@@ -6,7 +6,6 @@ Feature: Registro de Usuario
     * def userCredentials = read('classpath:data/auth_user.json')
 
   @registration_success
-  @regression
   Scenario: Registrar un nuevo usuario exitosamente
     Given path '/api/register'
     And request userCredentials

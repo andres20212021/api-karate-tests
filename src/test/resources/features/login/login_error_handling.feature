@@ -4,7 +4,6 @@ Feature: Pruebas negativas de autenticacion (Unhappy Paths)
     * url baseUrl
     * def errorSchema = read('classpath:schemas/login_error_response_schema.json')
 
-  @login_negative
     @error_handling
     @regression
   Scenario Outline: Login fallido por: <descripcion>
