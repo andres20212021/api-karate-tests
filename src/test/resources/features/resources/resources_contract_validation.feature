@@ -31,6 +31,6 @@ Feature: Validación de recursos
     And match response._meta.docs_url == '#regex ^https://.*'
     And match response._meta.cta.url == '#regex ^https://.*'
     And match response._meta.context contains 'success'
-    # Performance básica
+    # Performance basica
     And assert responseTime < 3000
     * karate.log('Listado de recursos validado correctamente. Total:', response.total)
