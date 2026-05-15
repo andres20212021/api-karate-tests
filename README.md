@@ -11,6 +11,25 @@ Framework de automatización de APIs desarrollado con:
 
 El objetivo del proyecto es implementar un framework moderno para automatización de APIs, incluyendo validaciones funcionales, validaciones de contrato, lógica de negocio, pruebas E2E y ejecución CI/CD automatizada.
 
+#  Características Implementadas
+
+✅ Contract Testing
+✅ Business Validation
+✅ Retry Until
+✅ Dynamic Data
+✅ Reusable Features
+✅ External Schemas
+✅ Scenario Outline
+✅ API Filtering
+✅ E2E Flows
+✅ CI/CD
+✅ Cucumber Reporting
+✅ Environment Management
+✅ Tags Strategy
+✅ JSON Schema Validation
+✅ Regex Validation
+✅ Performance Assertions
+
 #  Separación de responsabilidades
 
 El framework separa:
@@ -167,7 +186,7 @@ Además de validaciones avanzadas:
 '#number? _ > 0'
 ```
 
-## ✅ Validaciones de Negocio
+# Validaciones de Negocio
 
 Archivo:
 
@@ -264,6 +283,10 @@ Implementa:
 
 El proyecto implementa pipeline CI/CD con GitHub Actions.
 
+- Ejecutarse automáticamente al crear una Pull Request hacia la rama `main`
+- Permitir ejecución manual desde la pestaña **Actions** de GitHub
+- Contar con una configuración programada mediante `cron` para ejecutar las pruebas automáticamente todos los domingos; actualmente esta configuración se encuentra comentada en el archivo YAML
+
 #  Ejecución Local
 
 Ejecutar todas las pruebas:
@@ -304,25 +327,18 @@ karate-api-test-reports/
     └── cucumber-html-reports/
         └── overview-features.html
 ```
-Asi se veran los reportes 
+Para visualizar el reporte, hacer clic derecho sobre el archivo `overview-features.html`, seleccionar **"Abrir con"** y elegir el navegador de preferencia, por ejemplo:
+
+- Google Chrome
+- Microsoft Edge
+- Firefox
+
+Si deseas visualizar el reporte en tu entorno local, debes ir a la siguiente ruta generada después de ejecutar las pruebas:
+
+target/cucumber-report/cucumber-html-reports/overview-features.html --> seleccionar el archivo overview-features.html y abrir con el navegador 
+
+#  Asi se veran los reportes 
+
 ![Cucumber Features Report](images/cucumber-features-report.png)
 ![Cucumber Tags Report](images/cucumber-tags-report.png)
 
-#  Características Avanzadas Implementadas
-
-✅ Contract Testing
-✅ Business Validation
-✅ Retry Until
-✅ Dynamic Data
-✅ Reusable Features
-✅ External Schemas
-✅ Scenario Outline
-✅ API Filtering
-✅ E2E Flows
-✅ CI/CD
-✅ Cucumber Reporting
-✅ Environment Management
-✅ Tags Strategy
-✅ JSON Schema Validation
-✅ Regex Validation
-✅ Performance Assertions
