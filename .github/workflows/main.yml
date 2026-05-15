@@ -1,0 +1,41 @@
+name: Karate API Regression Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+  # Ejecución programada: todos los domingos a las 12:00 UTC
+  # schedule:
+  #   - cron: '0 12 * * 0'
+
+jobs:
+  api-tests:
+    name: Run Karate API Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Run Karate regression tests
+        run: mvn clean test -Dkarate.options="--tags @regression"
+
+      - name: Upload Karate and Cucumber Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: karate-api-test-reports
+          path: |
+            target/karate-reports/
+            target/cucumber-report/
+            target/surefire-reports/
