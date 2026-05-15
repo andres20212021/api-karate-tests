@@ -30,6 +30,16 @@ El objetivo del proyecto es implementar un framework moderno para automatizació
 ✅ Regex Validation
 ✅ Performance Assertions
 
+# APIs utilizadas
+
+El proyecto fue desarrollado utilizando las APIs públicas de ReqRes:
+
+https://reqres.in
+
+Para la ejecución de las pruebas automatizadas se configuró una `API Key`, la cual es enviada mediante headers globales definidos en `karate-config.js`.
+
+Esto permitió implementar validaciones funcionales, pruebas E2E, manejo de autenticación y automatización de flujos reales de consumo de APIs.
+
 #  Separación de responsabilidades
 
 El framework separa:
