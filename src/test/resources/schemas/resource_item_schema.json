@@ -1,0 +1,7 @@
+{
+  "id": "#number? _ > 0",
+  "name": "#string? _.length > 0",
+  "year": "#number? _ >= 2000 && _ <= 2100",
+  "color": "#regex ^#[A-Fa-f0-9]{6}$",
+  "pantone_value": "#regex ^\\d{2}-\\d{4}$"
+}

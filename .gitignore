@@ -1,0 +1,50 @@
+# Maven / Build
+target/
+*.class
+
+# Karate reports
+karate-reports/
+karate-reports_*/
+cucumber-report/
+surefire-reports/
+failsafe-reports/
+
+# Logs
+*.log
+logs/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / Secrets
+.env
+*.env
+*.properties
+secrets/
+credentials/
+*.key
+*.pem
+*.p12
+*.jks
+
+# Test temporary files
+tmp/
+temp/
+*.tmp
+
+# Allure reports/results
+allure-results/
+allure-report/
+
+# Node files if later used for reports/tools
+node_modules/
+package-lock.json
