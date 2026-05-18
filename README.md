@@ -5,6 +5,7 @@ Framework de automatización de APIs desarrollado con:
 * Karate DSL
 * Maven
 * JUnit 5
+* Cucumber - Gherkin
 * Cucumber Reporting
 * GitHub Actions
 * Java 21
