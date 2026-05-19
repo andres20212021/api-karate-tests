@@ -7,12 +7,12 @@ import org.junit.jupiter.api.AfterAll;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RunnersTest {
+public class LocalRunner {
 
     @Test
     void testParallel() {
         Results results = Runner.path("classpath:features")
-                .tags("@regression")
+                .tags("@e2e")
                 .outputCucumberJson(true)
                 .parallel(1);
 
