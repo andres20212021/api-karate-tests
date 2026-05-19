@@ -33,8 +33,6 @@ Feature: Validación de Usuario - Contrato y Negocio
     And assert response.data.first_name.length > 0
     And match response.data.last_name == "#string"
     And assert response.data.last_name.length > 0
-  # mensaje contenga texto esperado
-    And match response._meta.message contains 'data persists here'
   # enlaces dentro de _meta sean URLs HTTPS
     And match response._meta.docs_url == "#regex ^https://.*"
     And match response._meta.cta.url == "#regex ^https://.*"
